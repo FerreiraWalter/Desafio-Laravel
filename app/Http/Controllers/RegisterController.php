@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\ModelRegister;
 use Illuminate\Http\Request;
 use App\Models\User;
+use App\Http\Requests\RegisterRequest;
 
 class RegisterController extends Controller
 {
@@ -45,9 +46,22 @@ class RegisterController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(RegisterRequest $request)
     {
-        //
+        $reg = $this->objRegister->create([
+            'firstname' => $request->firstname,
+            'lastname' => $request->lastname,
+            'email' => $request->email,
+            'cpf' => $request->cpf,
+            'phone' => $request->phone,
+            'cep' => $request->cep,
+            'address' => $request->address,
+            'password' => $request->password
+        ]);
+
+        if($reg) {
+            return redirect('index');
+        }
     }
 
     /**
@@ -69,7 +83,8 @@ class RegisterController extends Controller
      */
     public function edit($id)
     {
-        //
+        $register = $this->objRegister->find($id);
+        return view('user', compact($register));
     }
 
     /**
@@ -79,11 +94,9 @@ class RegisterController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(RegisterRequest $request, $id)
     {
-        $this->objRegister->create([
-            'name' => $request->name
-        ]);
+        //
     }
 
     /**

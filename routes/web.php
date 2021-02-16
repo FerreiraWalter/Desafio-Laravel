@@ -16,7 +16,7 @@ use App\Http\Controllers\RegisterController;
 
 Route::resource('/index', RegisterController::class);
 
-
 Route::get('/user', function() {
     return view('user');
 });
+
