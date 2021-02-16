@@ -26,9 +26,10 @@ class RegisterRequest extends FormRequest
         return [
             'firstname' => 'required',
             'lastname' => 'required',
-            'cpf' => 'required|numeric|min:11',
-            'phone' => 'required|numeric|min:11',
-            'cep' => 'required|numeric|min:8',
+            'email' => 'required|unique:register',
+            'cpf' => 'required|unique:register|min:14',
+            'phone' => 'required|unique:register|min:15',
+            'cep' => 'required|min:9',
             'password' => 'required|min:6',
             'terms' => 'required'
         ];

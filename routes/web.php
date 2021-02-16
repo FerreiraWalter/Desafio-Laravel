@@ -16,7 +16,8 @@ use App\Http\Controllers\RegisterController;
 
 Route::resource('/index', RegisterController::class);
 
-Route::get('/user', function() {
-    return view('user');
-});
+Route::get('/user', 'App\Http\Controllers\RegisterController@create');
 
+Route::get('/user/{id}', 'App\Http\Controllers\RegisterController@edit');
+
+Route::put('/user/{id}', 'App\Http\Controllers\RegisterController@update');
