@@ -12,7 +12,7 @@ Após realizar o **download** do projeto é **necessário verificar** se os **So
 -**WampServer** ou **Xampp** (Rodar o projeto em um LocalHost)
 
 ### E agora?
-Feito a instalação dos **Softwares**, iniciliaze o **servidor web utilizando** o comando **php artisan serve** (Na pasta do projeto)
+Feito a instalação ou update dos **Softwares**, iniciliaze o **servidor web utilizando** o comando: **php artisan serve** (Na pasta do projeto)
 
 **AMBIENTE**
 | Ambiente  |  URL  |
@@ -22,8 +22,15 @@ Feito a instalação dos **Softwares**, iniciliaze o **servidor web utilizando**
 |  Edit |  localhost:8000/user/{id} |
 
 **OBS:** Caso um usuário com aquele id **não existir**, é redirecionado para o **formulário de criação** (Como pedido na Atividade 5)
+<hr>
 
-## Progresso:
+**POSSÍVEIS ERROS**
+| Erro |  Descrição  |
+| ------------------- | ------------------- |
+|  404 |  Quando digitado uma página inexistente |
+|  User |  Quando o Método não é encontrado |
+
+## Meu Progresso:
 | Relatório |  Atividades  |
 | ------------------- | ------------------- |
 |  Feitas |  1, 2, 4, 5, 6, 7 |
