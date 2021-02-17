@@ -11,15 +11,15 @@
       </ul>
     </div>
   @endif
-  
+
 <p class="text-3xl p-4 flex justify-center">@if(isset($register)) Edit User @else Register @endif</p>
 <div class="flex justify-center">
   <div class="w-11/12 p-12 bg-white sm:w-8/12 md:w-1/2 lg:w-6/12 flex justify-center">
 
     @if(isset($register))
-        <form class="p-5" method="POST" action="{{url("user/$register->id")}}">
-        @csrf
-        @method('PUT')
+        <form class="p-5" method="post" action="{{url("user/$register->id")}}">
+          @csrf
+          @method('PUT')
       @else
         <form class="p-5" method="post" action="{{url('index')}}">
     @endif

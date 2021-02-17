@@ -95,7 +95,7 @@ class RegisterController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(RegisterRequest $request, $id)
+    public function update(Request $request, $id)
     {
         $reg = $this->objRegister->where(['id'=>$id])->update([
             'firstname' => $request->firstname,

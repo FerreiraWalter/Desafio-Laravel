@@ -27,7 +27,7 @@
                   <th class="border hover:bg-gray-100 p-3">{{$registers->cep}}</th>
                   <th class="border hover:bg-gray-100 p-3">{{$registers->address}}</th>
                   <th class="border hover:bg-gray-100 p-3">
-                    <a href="{{url("user/$registers->id")}}"><button type="button" class="mr-0.5 text-sm bg-blue-500 hover:bg-blue-700 text-white py-1 px-4 rounded focus:outline-none focus:shadow-outline">Edit</button></a>
+                    <a href="{{url("user/$registers->id/edit")}}"><button type="button" class="mr-0.5 text-sm bg-blue-500 hover:bg-blue-700 text-white py-1 px-4 rounded focus:outline-none focus:shadow-outline">Edit</button></a>
                   </th>
                 </tr>
             @endforeach
