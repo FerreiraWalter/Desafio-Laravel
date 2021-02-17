@@ -14,10 +14,14 @@ use App\Http\Controllers\RegisterController;
 |
 */
 
+Route::get('/home', function(){
+    view('home');
+});
+
 Route::resource('/index', RegisterController::class);
 
 Route::get('/user', 'App\Http\Controllers\RegisterController@create');
 
 Route::get('/user/{id}', 'App\Http\Controllers\RegisterController@edit');
 
-Route::put('/user/{id}', 'App\Http\Controllers\RegisterController@update');
+Route::post('user/{id}', 'App\Http\Controllers\RegisterController@update');

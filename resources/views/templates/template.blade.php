@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 
     <!-- Script(alpinejs, jquery) -->
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
@@ -20,16 +21,22 @@
         });
     </script>
 
-    <title>PLURAL</title>
+    <title>Plural</title>
 </head>
 <body>
     <!-- Navbar -->
-    <nav class="relative select-none bg-black lg:flex lg:items-stretch w-full">
-    <div class="flex flex-no-shrink items-stretch h-12">
-        <p href="#" class="flex-no-grow flex-no-shrink relative py-2 px-4 leading-normal text-white no-underline flex items-center hover:bg-grey-dark">PLURAL</p>
-        <a href="{{url('/user')}}" class="flex-no-grow flex-no-shrink relative py-2 px-4 leading-normal text-white no-underline flex items-center hover:bg-grey-dark">Register</a>
-        <a href="{{url('/index')}}" class="flex-no-grow flex-no-shrink relative py-2 px-4 leading-normal text-white no-underline flex items-center hover:bg-grey-dark">Edit</a>
-    </div>
+    <nav class="bg-gray-200 px-8 pt-2">
+        <div class="-mb-px flex justify-center">
+        <a class="no-underline text-grey-dark border-b-2 border-transparent uppercase tracking-wide font-bold text-xs py-3 mr-8 transform hover:scale-110 motion-reduce:transform-none" href="{{url('/home')}}">
+                Home
+            </a>
+            <a class="no-underline text-grey-dark border-b-2 border-transparent uppercase tracking-wide font-bold text-xs py-3 mr-8 transform hover:scale-110 motion-reduce:transform-none" href="{{url('/user')}}">
+                Sign Up
+            </a>
+            <a class="no-underline text-grey-dark border-b-2 border-transparent uppercase tracking-wide font-bold text-xs py-3 mr-8 transform hover:scale-110 motion-reduce:transform-none" href="{{url('/index')}}">
+                Edit
+            </a>
+        </div>
     </nav>
     
     @yield('content')

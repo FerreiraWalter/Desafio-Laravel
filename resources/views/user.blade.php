@@ -11,17 +11,17 @@
       </ul>
     </div>
   @endif
-
-<div class="grid min-h-screen place-items-center">
-  <div class="w-11/12 p-12 bg-white sm:w-8/12 md:w-1/2 lg:w-5/12">
-    <!-- Name(Edit or Register) -->
-    <p class="text-2xl">@if(isset($register)) Edit @else Register @endif</p>
+  
+<p class="text-3xl p-4 flex justify-center">@if(isset($register)) Edit User @else Register @endif</p>
+<div class="flex justify-center">
+  <div class="w-11/12 p-12 bg-white sm:w-8/12 md:w-1/2 lg:w-6/12 flex justify-center">
 
     @if(isset($register))
-        <form class="mt-6" method="POST" action="{{url("user/$register->id")}}">
+        <form class="p-5" method="POST" action="{{url("user/$register->id")}}">
+        @csrf
         @method('PUT')
       @else
-        <form class="mt-6" method="post" action="{{url('index')}}">
+        <form class="p-5" method="post" action="{{url('index')}}">
     @endif
       @csrf
           <div class="flex justify-between gap-3">
@@ -41,11 +41,11 @@
           <!-- E-mail and CPF -->
           <div class="flex justify-between gap-3">
             <span class="w-1/2">
-              <label for="email" class="block text-xs font-semibold text-gray-600 uppercase">E-MAIL</label>
+              <label for="email" class="block mt-2 text-xs font-semibold text-gray-600 uppercase">E-MAIL</label>
               <input id="email" type="email" name="email" placeholder="ferreira.walter@company.com" class="block w-full p-3 mt-2 text-gray-700 bg-gray-200 appearance-none focus:outline-none focus:bg-gray-300 focus:shadow-inner" value="{{$register->email ?? ''}}"  required />
             </span>
             <span class="w-1/2">
-              <label for="cpf" class="block text-xs font-semibold text-gray-600 uppercase">CPF</label>
+              <label for="cpf" class="block mt-2 text-xs font-semibold text-gray-600 uppercase">CPF</label>
               <input id="cpf" type="text" name="cpf" placeholder="000.000.000-00" class="block w-full p-3 mt-2 text-gray-700 bg-gray-200 appearance-none focus:outline-none focus:bg-gray-300 focus:shadow-inner"
               value="{{$register->cpf ?? ''}}" required />
             </span>
@@ -54,12 +54,12 @@
           <!-- Phone and CEP -->
           <div class="flex justify-between gap-3">
             <span class="w-1/2">
-              <label for="phone" class="block text-xs font-semibold text-gray-600 uppercase">PHONE</label>
+              <label for="phone" class="block mt-2 text-xs font-semibold text-gray-600 uppercase">PHONE</label>
               <input id="phone" type="phone" name="phone" placeholder="(00) 000000-0000" class="block w-full p-3 mt-2 text-gray-700 bg-gray-200 appearance-none focus:outline-none focus:bg-gray-300 focus:shadow-inner" 
               value="{{$register->phone ?? ''}}" required />
             </span>
             <span class="w-1/2">
-              <label for="cep" class="block text-xs font-semibold text-gray-600 uppercase">CEP</label>
+              <label for="cep" class="block mt-2 text-xs font-semibold text-gray-600 uppercase">CEP</label>
               <input id="cep" type="cep" name="cep" placeholder="00000-000" class="block w-full p-3 mt-2 text-gray-700 bg-gray-200 appearance-none focus:outline-none focus:bg-gray-300 focus:shadow-inner" 
               value="{{$register->cep ?? ''}}" required />
             </span>
@@ -79,7 +79,7 @@
           @if(!isset($register))
             <div class="flex flex-col">
               <label class="inline-flex items-center mt-3">
-                  <input type="checkbox" class="form-checkbox h-5 w-5 text-gray-600" name="terms"><span class="ml-2 text-gray-700">By creating an account, you agree to the <a href="#">Terms of Service.</a></span>
+                  <input type="checkbox" class="form-checkbox h-5 w-5 bg-gray-200" name="terms"><span class="ml-2 text-gray-700">By creating an account, you agree to the <a href="#">Terms of Service.</a></span>
               </label>
             </div>
           @endif

@@ -107,9 +107,8 @@ class RegisterController extends Controller
             'address' => $request->address,
             'password' => $request->password
         ]);
-        if($reg) {
-            return redirect('index');
-        }
+        return redirect('index');
+
     }
 
     /**
