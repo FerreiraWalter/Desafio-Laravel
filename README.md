@@ -24,18 +24,8 @@ Feito a instalação dos **Softwares**, iniciliaze o **servidor web utilizando**
 **OBS:** Caso um usuário com aquele id **não existir**, é redirecionado para o **formulário de criação** (Como pedido na Atividade 5)
 
 ## Progresso:
-ATIVIDADE 1: ✅
-
-ATIVIDADE 2: ✅
-
-ATIVIDADE 3: ❌
-
-ATIVIDADE 4: ✅
-
-ATIVIDADE 5: ✅
-
-ATIVIDADE 6: ✅
-
-ATIVIDADE 7: ✅
-
-ATIVIDADE 8: ❌
+| Relatório |  Atividades  |
+| ------------------- | ------------------- |
+|  Feitas |  1, 2, 4, 5, 6, 7 |
+|  Dúvidas |  3 |
+|  Não Feitas | 8 |
