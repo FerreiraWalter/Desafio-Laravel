@@ -9,7 +9,7 @@ Após realizar o **download** do projeto é **necessário verificar** se os **So
 
 -PHP **7.4.3**, Composer **2.0.9**, Laravel **8.27.0**
 
--**WampServer** ou **Xampp** (Rodar o projeto em um LocalHost)
+-**WampServer** ou **Xampp** (para rodar o projeto em um localhost)
 
 ### E agora?
 Feito a instalação ou update dos **Softwares**, iniciliaze o **servidor web utilizando** o comando: **php artisan serve** (Na pasta do projeto)
