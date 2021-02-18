@@ -28,7 +28,7 @@ Feito a instalação ou update dos **Softwares**, iniciliaze o **servidor web ut
 |  User |  127.0.0.1:8000/user |
 |  Edit |  127.0.0.1:8000/user/{id} |
 
-**OBS:** Caso um usuário com aquele id **não existir**, é redirecionado para o **formulário de criação** (Como pedido na Atividade 5)
+**OBS:** Caso um usuário com aquele id **não exista**, é redirecionado para o **formulário de criação** (Como pedido na Atividade 5)
 <hr>
 
 ### Banco de Dados
