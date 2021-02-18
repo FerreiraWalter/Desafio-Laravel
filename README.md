@@ -42,6 +42,9 @@ DB_USERNAME=root
 DB_PASSWORD=
 ~~~
 
+**OBS:** Em **database.php** usei o **'utf8mb4_unicode_ci'** no **Collation**
+<hr>
+
 ## Meu Progresso:
 | Relatório |  Atividades  |
 | ------------------- | ------------------- |
