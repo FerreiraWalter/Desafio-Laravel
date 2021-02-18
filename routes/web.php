@@ -19,6 +19,6 @@ Route::resource('/index', RegisterController::class);
 
 Route::get('/user', 'App\Http\Controllers\RegisterController@create');
 
-Route::get('/user/{id}/edit', 'App\Http\Controllers\RegisterController@edit');
+Route::get('/user/{id}', 'App\Http\Controllers\RegisterController@edit');
 
 Route::put('user/{id}', 'App\Http\Controllers\RegisterController@update');
